@@ -1,0 +1,142 @@
+GET http://localhost:1337/api/blogssdfdsfsdfsd
+
+GET http://localhost:1337/api/users
+
+DELETE   http://localhost:1337/api/blogs/65bd35030de4d45a036b6606
+
+POST http://localhost:1337/api/blogs
+Content-Type: application/json
+{
+    "author": "Holga Kilgore",
+    "url": "https://github.com/Itsfoss0",
+    "title": "Getting good at git"
+}
+
+POST http://localhost:1337/api/blogs
+Content-Type: application/json
+{
+    "author": "Taylor Shaw",
+    "url": "https://learnk8s.io",
+    "title": "Kubernetes Ingress"
+}
+
+POST http://localhost:1337/api/blogs
+Content-Type: application/json
+{
+    "author": "Robert Greene",
+    "url": "https://foo.bar.baz",
+    "title": "Foo Bar"
+}
+
+PUT  http://localhost:1337/api/blogs/65b66a44436d1a52803238a8
+Content-Type: application/json
+{
+    "author": "Sherlock Holmes",
+    "url": "itsfoss0.hashnode.dev",
+    "title": "What is systemd",
+    "likes": 3
+}
+
+POST http://localhost:1337/api/blogs
+Content-Type: application/json
+{
+    "author": "Jane Doe",
+    "title": "Docker compose for all"
+}
+
+
+GET http://localhost:1337/api/users/
+GET http://localhost:1337/api/blogs/
+
+POST http://localhost:1337/api/users
+Content-Type: application/json
+{
+    "username": "holgaK",
+    "name": "Holga Kilgore",
+    "password": "holga"
+}
+
+POST http://localhost:1337/api/users
+Content-Type: application/json
+{
+    "username": "sherlock",
+    "name": "Sherlock Holmes",
+    "password": "sholmes"
+}
+
+POST http://localhost:1337/api/auth/login
+Content-Type: application/json
+{
+    "username": "sherlock",
+    "password": "sholmes"
+}
+
+POST http://localhost:1337/api/users
+Content-Type: application/json
+{
+    "username":"D",
+    "name": "Go",
+    "password": "bravosix"
+}
+
+POST http://localhost:1337/api/auth/login
+Content-Type: application/json
+{
+    "username": "holgaK",
+    "password": "holga"
+}
+
+
+
+POST http://localhost:1337/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbGdhSyIsIm5hbWUiOiJIb2xnYSBLaWxnb3JlIiwidXNlcklkIjoiNjViZDM5NWYwZDhmNjZjODJmMzA2NmRlIiwiaWF0IjoxNzA2OTA4Mzg3LCJleHAiOjE3MDY5MTE5ODd9.eZ1t002jykChqftqR_vDiXVFKQI47gWZgqHyaJMPFQo
+Content-Type: application/json
+{
+    "author": "Coconut Man",
+    "url": "https://foo.bar.baz",
+    "title": "Mirrors"
+}
+
+
+POST http://localhost:1337/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbGdhSyIsIm5hbWUiOiJIb2xnYSBLaWxnb3JlIiwidXNlcklkIjoiNjViZDM5NWYwZDhmNjZjODJmMzA2NmRlIiwiaWF0IjoxNzA2OTA4Mzg3LCJleHAiOjE3MDY5MTE5ODd9.eZ1t002jykChqftqR_vDiXVFKQI47gWZgqHyaJMPFQo
+Content-Type: application/json
+{
+    "author": "Ross Copperman",
+    "url": "https://foo.bar.baz",
+    "title": "Hunger"
+}
+
+POST http://localhost:1337/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbGdhSyIsIm5hbWUiOiJIb2xnYSBLaWxnb3JlIiwidXNlcklkIjoiNjViZDM5NWYwZDhmNjZjODJmMzA2NmRlIiwiaWF0IjoxNzA2OTEyMjI4LCJleHAiOjE3MDY5MTU4Mjh9.bZvmFNsferKLyCJldDaUJSXdIy-wYBxSVSB4N8divlI
+Content-Type: application/json
+{
+    "author": "Brett Sam",
+    "url": "http://wecareaboutsre.tech",
+    "title": "Introduction to service mesh - LinkerD"
+}
+
+POST http://localhost:1337/api/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbGdhSyIsIm5hbWUiOiJIb2xnYSBLaWxnb3JlIiwidXNlcklkIjoiNjViZDM5NWYwZDhmNjZjODJmMzA2NmRlIiwiaWF0IjoxNzA2OTQ1NTUzLCJleHAiOjE3MDY5NDkxNTN9.HwWkfdueQuVceT1zlPQSemcsVvlJxs7zjwqhGXXxt4Q
+Content-Type: application/json
+{
+    "author": "Brett Sam",
+    "url": "http://wecareaboutsre.tech",
+    "title": "Introduction to service mesh - LinkerD"
+}
+
+
+GET  http://localhost:1337/api/blogs/65bd3c517e77f490e50c9e4e
+
+PUT   http://localhost:1337/api/blogs/65bd3c517e77f490e50c9e4e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbGdhSyIsIm5hbWUiOiJIb2xnYSBLaWxnb3JlIiwidXNlcklkIjoiNjViZDM5NWYwZDhmNjZjODJmMzA2NmRlIiwiaWF0IjoxNzA2OTUxMjc0LCJleHAiOjE3MDY5NTQ4NzR9.RXEMGUpdNIt_l3qEmsh33zoMTbFEiPaD7FuxYV4fLlM
+Content-Type: application/json
+{
+    "title": "You don't need a sevice mesh (yet)",
+    "author": "Some random guy",
+    "likes": 3,
+    "url": "https://learnk8s.io"
+}
+
+DELETE  http://localhost:1337/api/blogs/65bdf736cb3884d7258a1305
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhvbGdhSyIsIm5hbWUiOiJIb2xnYSBLaWxnb3JlIiwidXNlcklkIjoiNjViZDM5NWYwZDhmNjZjODJmMzA2NmRlIiwiaWF0IjoxNzA2OTQ1NTUzLCJleHAiOjE3MDY5NDkxNTN9.HwWkfdueQuVceT1zlPQSemcsVvlJxs7zjwqhGXXxt4Q
