@@ -3,7 +3,6 @@
 ### About
 
 This is an API where users can store their favourite blogs. Other users can visit them and upvote or downvote, stackoverflow style.
-
 ### Usage
 
 After cloning this repository and navigating to `bloglist`, follow the steps listed below for local development
