@@ -9,6 +9,6 @@ commit_msg=$(cat "$commit_msg_filepath")
 # Check if the commit message matches the required format
 # the format is [action]: description
 if ! [[ "$commit_msg" =~ ^\[.*\]: ]]; then
-    echo "ERROR! Check the commit message format"
+    echo "Your commit message does not follow the standard"
     exit 1
 fi
