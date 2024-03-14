@@ -36,6 +36,7 @@ blogRouter.get("/", async (request, response) => {
     });
     return response.status(500).json({ error: "Internal Server Error" });
   } finally {
+    console.log(span)
     span.end();
   }
 });
@@ -58,6 +59,7 @@ blogRouter.get("/:id", async (request, response) => {
     });
     return response.status(505).json({ error: "Internal server error" });
   } finally {
+    console.log(span)
     span.end();
   }
 });
