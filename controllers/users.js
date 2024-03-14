@@ -4,6 +4,7 @@
 
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
+const { tokenExtractor, userExtractor } = require('../middleware/auth');
 const userRouter = require('express').Router();
 
 userRouter.get('/', async (request, response) => {
@@ -15,6 +16,21 @@ userRouter.get('/', async (request, response) => {
   });
   if (users.length === 0) return response.status(204).end();
   return response.json(users);
+});
+
+userRouter.post('/me', tokenExtractor, userExtractor, async (request, response) => {
+  const user = request.user;
+  if (!user) {
+    return response.status(401).json({ error: 'you must login' });
+  }
+
+  const profile = await User.findById(user._id).populate('blogs', {
+    title: 1,
+    author: 1,
+    url: 1,
+    likes: 1
+  });
+  return response.json(profile);
 });
 
 userRouter.get('/:id', async (request, response) => {
