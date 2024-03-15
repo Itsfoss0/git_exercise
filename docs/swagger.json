@@ -8,6 +8,9 @@
     "servers": [
         {
             "url": "http://localhost:1337/api"
+        },
+        {
+            "url": "https://git-exercise.onrender.com/api"
         }
     ],
     "paths": {
